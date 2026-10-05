@@ -1,0 +1,228 @@
+PYTHON LISTS
+
+A Python list is an ordered and mutable collection. Lists can contain
+multiple values and allow duplicate elements.
+
+Common operations include append(), insert(), remove(), pop(), and sort().
+
+Accessing an element by index generally takes O(1) time.
+
+Searching for an element in an unsorted list generally takes O(n) time.
+
+Appending an element to the end of a Python list is generally O(1)
+amortized time.
+
+
+---
+
+ARRAYS
+
+Arrays store elements in contiguous memory in many programming languages.
+
+Accessing an array element by index is generally O(1).
+
+Searching an unsorted array requires O(n) time.
+
+Inserting an element at the beginning or middle may require shifting
+elements and can take O(n) time.
+
+
+---
+
+LINKED LIST
+
+A linked list consists of nodes where each node stores data and a
+reference to another node.
+
+Accessing the kth element requires traversal and generally takes O(n).
+
+Insertion at the beginning can take O(1) if a head pointer is available.
+
+Searching for an element takes O(n).
+
+Linked lists are useful when frequent insertion and deletion operations
+are required and random access is not important.
+
+
+---
+
+STACK
+
+A stack follows the LIFO principle: Last In, First Out.
+
+Common operations are push, pop, and peek.
+
+These operations generally take O(1) time when implemented properly.
+
+Stacks are commonly used in recursion, expression evaluation,
+parentheses matching, and backtracking.
+
+
+---
+
+QUEUE
+
+A queue follows the FIFO principle: First In, First Out.
+
+Common operations include enqueue and dequeue.
+
+Queues are commonly used in scheduling, BFS traversal, and buffering.
+
+A queue can be efficiently implemented using a linked list or a circular
+array.
+
+
+---
+
+BINARY SEARCH
+
+Binary search works on a sorted collection.
+
+At every step, the search space is divided approximately in half.
+
+The time complexity is O(log n).
+
+The iterative version generally requires O(1) additional space.
+
+Binary search cannot be directly applied to an unsorted array unless
+the data is first sorted.
+
+
+---
+
+LINEAR SEARCH
+
+Linear search checks elements one by one.
+
+Its worst-case time complexity is O(n).
+
+Its best-case complexity is O(1) when the target is the first element.
+
+It works on both sorted and unsorted collections.
+
+
+---
+
+BUBBLE SORT
+
+Bubble sort repeatedly compares adjacent elements and swaps them when
+they are in the wrong order.
+
+Worst-case time complexity is O(n^2).
+
+Best-case complexity can be O(n) when an optimized implementation detects
+that no swaps are required.
+
+Space complexity is O(1).
+
+
+---
+
+MERGE SORT
+
+Merge sort uses the divide-and-conquer technique.
+
+The array is divided into smaller parts, sorted recursively, and merged.
+
+Time complexity is O(n log n).
+
+Additional space complexity is generally O(n).
+
+Merge sort provides predictable O(n log n) performance.
+
+
+---
+
+QUICK SORT
+
+Quick sort uses a pivot and partitions the array around the pivot.
+
+Average time complexity is O(n log n).
+
+Worst-case time complexity is O(n), although good pivot selection can
+reduce the probability of the worst case.
+
+The exact space complexity depends on the implementation and recursion.
+
+
+---
+
+RECURSION
+
+Recursion occurs when a function calls itself.
+
+Every recursive solution should have a base case that stops recursion.
+
+Without a proper base case, recursion can continue indefinitely and may
+cause a stack overflow.
+
+Recursive algorithms use the call stack, so space complexity should
+consider recursion depth.
+
+
+---
+
+HASH TABLE
+
+A hash table stores key-value pairs using a hash function.
+
+Average-case insertion, deletion, and lookup are generally O(1).
+
+Worst-case complexity can become O(n) because of collisions.
+
+Hash tables are useful when fast key-based lookup is required.
+
+
+---
+
+BINARY TREE
+
+A binary tree is a tree where each node has at most two children.
+
+Tree traversal methods include preorder, inorder, and postorder.
+
+In a binary search tree, the left subtree contains smaller values and
+the right subtree contains larger values under the usual BST property.
+
+
+---
+
+BFS
+
+Breadth-First Search explores a graph level by level.
+
+BFS commonly uses a queue.
+
+For a graph represented using adjacency lists, BFS has time complexity
+O(V + E), where V is the number of vertices and E is the number of edges.
+
+
+---
+
+DFS
+
+Depth-First Search explores as deeply as possible before backtracking.
+
+DFS can be implemented recursively or using an explicit stack.
+
+For an adjacency-list graph, DFS has time complexity O(V + E).
+
+
+---
+
+BIG O NOTATION
+
+Big O notation describes how the running time or memory usage of an
+algorithm grows as the input size increases.
+
+Common complexities include:
+
+O(1) - constant
+O(log n) - logarithmic
+O(n) - linear
+O(n log n) - linearithmic
+O(n^2) - quadratic
+O(2^n) - exponential
+
+When analyzing nested loops, carefully determine how many times each loop
+executes and whether their ranges are dependent on one another.
