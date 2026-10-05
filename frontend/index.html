@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Code Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div>
+
+            <h1>
+                AI Code Assistant
+            </h1>
+
+            <p>
+                Explain • Debug • Optimize • Review
+            </p>
+
+        </div>
+
+        <div
+            id="status"
+            class="status"
+        >
+            Checking...
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="panel">
+
+            <div class="controls">
+
+                <div class="control-group">
+
+                    <label for="language">
+                        Language
+                    </label>
+
+                    <select id="language">
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="Java">
+                            Java
+                        </option>
+
+                        <option value="C++">
+                            C++
+                        </option>
+
+                        <option value="JavaScript">
+                            JavaScript
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="control-group">
+
+                    <label for="task">
+                        Task
+                    </label>
+
+                    <select id="task">
+
+                        <option value="Explain Code">
+                            Explain Code
+                        </option>
+
+                        <option value="Debug Code">
+                            Debug Code
+                        </option>
+
+                        <option value="Optimize Code">
+                            Optimize Code
+                        </option>
+
+                        <option value="Complexity Analysis">
+                            Complexity Analysis
+                        </option>
+
+                        <option value="Code Review">
+                            Code Review
+                        </option>
+
+                        <option value="Convert Code">
+                            Convert Code
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <label class="section-label">
+                Your Code
+            </label>
+
+            <textarea
+                id="code"
+                placeholder="// Paste your code here..."
+            ></textarea>
+
+
+            <label class="section-label">
+                Error Message
+                <span>
+                    Optional
+                </span>
+            </label>
+
+            <textarea
+                id="error"
+                class="error-box"
+                placeholder="Paste the error message here if you have one..."
+            ></textarea>
+
+
+            <button
+                id="analyzeBtn"
+                onclick="analyzeCode()"
+            >
+                Analyze Code
+            </button>
+
+
+            <button
+                class="clear-btn"
+                onclick="clearAll()"
+            >
+                Clear
+            </button>
+
+        </section>
+
+
+        <section class="panel result-panel">
+
+            <div class="result-header">
+
+                <h2>
+                    AI Analysis
+                </h2>
+
+                <button
+                    onclick="copyResult()"
+                    class="copy-btn"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div
+                id="syntaxResult"
+                class="syntax-result hidden"
+            >
+            </div>
+
+
+            <div
+                id="result"
+                class="result"
+            >
+
+                <div class="empty-state">
+
+                    <div class="icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        Ready to analyze your code
+                    </h3>
+
+                    <p>
+                        Enter your code and select an analysis mode.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            AI-Powered Code Explanation and Debugging Assistant
+        </p>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
